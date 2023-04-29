@@ -1,5 +1,5 @@
 //your code here
-let prices = document.querySelectorAll('[data-ns-test="prices"]');
+let prices = document.querySelectorAll('[data-ns-test="price"]');
 // console.log(prices);
 let sum = 0;
 prices.forEach((item) => {
