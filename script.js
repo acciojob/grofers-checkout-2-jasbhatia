@@ -19,7 +19,7 @@ let newCol1 = newRow.insertCell();
 let newCol = newRow.insertCell();
 // console.log(newCol);
 newCol1.innerText = "Total";
-newCol.innerText =sum.toFixed(2);
+newCol.innerText =parseInt(sum);
 
 
 
