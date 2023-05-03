@@ -22,7 +22,7 @@
 // newCol.innerText =parseInt(sum);
 
 // 
-  const prices = document.querySelectorAll('[data-ns-test="prices"]');
+  // const prices = document.querySelectorAll('[data-ns-test="prices"]');
 const prices = document.querySelectorAll('[data-ns-test="price"]');
 
 // Calculate the total price by summing up all the prices
