@@ -1,16 +1,35 @@
-const getSumBtn = document.createElement("button");
-getSumBtn.append("Get Total Price");
-document.body.appendChild(getSumBtn);
-var ans = document.querySelector("#ans")
-const getSum = () => {
-//Add your code here
-	var prices=document.querySelectorAll(".price")
-	const value = Array.from(prices).map(item => Number(item.textContent));
-	let sum=0;
-  for(var i of value){
-    sum=sum+i;
-  }
-  ans.innerHTML+=`<tr><td>Total Price</td><td>${sum}</td></tr>`
-};
+//your code here
+// let prices = document.querySelectorAll('[data-ns-test="price"]');
+// // console.log(prices);
+// let sum = 0;
+// prices.forEach((item) => {
+//   sum += parseFloat(item.textContent);
+// });
+// console.log(sum);
 
-getSumBtn.addEventListener("click", getSum);
+// const table = document.querySelector("table");
+// // console.log(table);
+
+// let newRow = table.insertRow();
+// console.log(newRow);
+// newRow.setAttribute("data-ns-test", "grandTotal");
+// // console.log(newRow);
+// let newCol1 = newRow.insertCell();
+// // console.log(newCol1);
+// let newCol = newRow.insertCell();
+// // console.log(newCol);
+// newCol1.innerText = "Total";
+// newCol.innerText =parseInt(sum);
+
+// 
+  // const prices = document.querySelectorAll('[data-ns-test="prices"]');
+const prices = document.querySelectorAll('[data-ns-test="price"]');
+
+// Calculate the total price by summing up all the prices
+let totalPrice = 0;
+for (let i = 0; i < prices.length; i++) {
+  totalPrice += parseFloat(prices[i].innerText);
+}
+// Add the total price to the table
+const grandTotalCell = document.querySelector('[data-ns-test="grandTotal"]');
+grandTotalCell.innerText = totalPrice.toFixed(2);
